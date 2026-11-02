@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Hope Haven Foundation Soweto | Address, Map, Phone & Email</title>
+<meta name="description" content="Contact Hope Haven Foundation at 123 Freedom Street, Soweto. Phone +27 82 555 0199, email info@hopehaven.org.za. Open Mon-Fri 11:00-17:00. See our live map.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+<header>
+  <nav>
+    <a class="logo" href="index.html">Hope<span>Haven</span></a>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="news.html">News</a>
+      <a href="enquiry.html">Enquiry</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <button class="btn" id="donateBtn">Donate ❤️</button>
+  </nav>
+</header>
+
+<main class="container page-shell">
+  <section class="page-hero fade">
+    <div class="hero-copy">
+      <p class="eyebrow">Contact us</p>
+      <h1>We’d love to hear from you.</h1>
+      <p class="lead">Whether you want to support a child, volunteer with us, or ask a question about our programmes, we’re here to help.</p>
+      <div class="hero-actions">
+        <a class="btn" href="enquiry.html">Make an Enquiry</a>
+        <a class="btn btn-blue" href="get-involved.html">Donate</a>
+      </div>
+      <ul class="mini-stats">
+        <li><strong>📍</strong><span>123 Freedom Street, Soweto</span></li>
+        <li><strong>📞</strong><span>+27 82 555 0199</span></li>
+        <li><strong>✉️</strong><span>info@hopehaven.org.za</span></li>
+      </ul>
+    </div>
+    <div class="hero-visual">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80" alt="Hope Haven team and community outreach group">
+    </div>
+  </section>
+
+  <section class="story-banner fade" style="margin-top:30px;">
+    <div class="story-content">
+      <p class="eyebrow">Find us</p>
+      <h2>Visit or reach out</h2>
+      <p>📍 123 Freedom Street, Soweto<br>🕒 Mon-Fri 11:00-17:00<br>📞 +27 82 555 0199<br>✉️ info@hopehaven.org.za</p>
+    </div>
+    <div class="story-image">
+      <div id="map" style="height:320px; width:100%; border-radius:22px; overflow:hidden;"></div>
+    </div>
+  </section>
+
+  <section class="faq-wrap fade">
+    <div class="section-heading">
+      <p class="eyebrow">Message us</p>
+      <h2>Send us a message</h2>
+    </div>
+    <form id="contactForm" action="mailto:info@hopehaven.org.za" method="POST" enctype="text/plain" novalidate>
+      <label>Full Name *</label><input id="ctName" type="text" required minlength="3"><span class="error" id="cerrName"></span>
+      <label>Email *</label><input id="ctEmail" type="email" required><span class="error" id="cerrEmail"></span>
+      <label>Phone (optional)</label><input id="ctPhone" type="tel" pattern="0[0-9]{9}" placeholder="0825550199"><span class="error" id="cerrPhone"></span>
+      <label>Type of Message *</label><select id="ctType" required><option>General</option><option>Complaint</option><option>Partnership</option><option>Media</option></select>
+      <label>Full Message *</label><textarea id="ctMsg" required minlength="10" rows="5"></textarea><span class="error" id="cerrMsg"></span>
+      <button class="btn btn-blue" type="submit">Send via Email</button>
+    </form>
+    <div class="success" id="contactResult"></div>
+  </section>
+</main>
+
+<footer class="site-footer container">
+  <div class="footer-brand">
+    <span class="brand-mark">❤</span>
+    <span>Hope Haven Foundation</span>
+  </div>
+  <div class="footer-links">
+    <a href="contact.html"><i>📍</i> Visit Us</a>
+    <a href="tel:+27825550199"><i>📞</i> Call</a>
+    <a href="mailto:info@hopehaven.org.za"><i>✉️</i> Email</a>
+    <a href="https://facebook.com/" target="_blank" rel="noopener"><i>f</i> Facebook</a>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+var map = L.map('map').setView([-26.2485,27.8540], 13);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
+L.marker([-26.2485,27.8540]).addTo(map).bindPopup('<b>Hope Haven Foundation</b><br>123 Freedom Street, Soweto').openPopup();
+</script>
+<script src="main.js"></script><script src="forms.js"></script>
+</body></html>

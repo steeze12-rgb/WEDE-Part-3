@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Programmes | Education, Feeding & Mentorship Soweto - Hope Haven</title>
+<meta name="description" content="Search, filter and sort Hope Haven programmes in Soweto: education support, feeding scheme, mentorship, workshops. Check cost and spots left.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <nav>
+    <a class="logo" href="index.html">Hope<span>Haven</span></a>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html" class="active">Programs</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="news.html">News</a>
+      <a href="enquiry.html">Enquiry</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="btn" id="donateBtn">Donate ❤️</button>
+  </nav>
+</header>
+
+<main class="container page-shell">
+  <section class="page-hero fade">
+    <div class="hero-copy">
+      <p class="eyebrow">What we offer</p>
+      <h1>Support that helps children feel safe, fed, and ready to learn.</h1>
+      <p class="lead">Every programme is designed to strengthen wellbeing, confidence, and opportunity for children and young people in Soweto.</p>
+      <div class="hero-actions">
+        <a class="btn" href="get-involved.html">Support a Programme</a>
+        <a class="btn btn-blue" href="enquiry.html">Ask a Question</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=80" alt="Students learning and smiling in a community programme">
+    </div>
+  </section>
+
+  <section class="faq-wrap fade" style="margin-top:30px;">
+    <div class="section-heading">
+      <p class="eyebrow">Find a programme</p>
+      <h2>Search, filter and sort</h2>
+    </div>
+
+    <label>Search programmes:</label>
+    <input type="search" id="searchBox" placeholder="Try: feeding, tutoring, girls..." oninput="applyFilters()">
+    <label>Filter by category:</label>
+    <select id="filterCat" onchange="applyFilters()">
+      <option value="All">All Categories</option>
+      <option value="Education">Education</option>
+      <option value="Feeding">Feeding</option>
+      <option value="Mentorship">Mentorship</option>
+    </select>
+    <label>Sort by:</label>
+    <select id="sortBy" onchange="applyFilters()">
+      <option value="name">Name A-Z</option>
+      <option value="priceLow">Price Low to High</option>
+      <option value="priceHigh">Price High to Low</option>
+    </select>
+    <p id="resultCount" style="margin-top:12px; color:#5f6b7d;"></p>
+
+    <div class="tabs" style="margin-top:20px;">
+      <button class="active" onclick="document.getElementById('filterCat').value='All';applyFilters()">All</button>
+      <button onclick="document.getElementById('filterCat').value='Education';applyFilters()">Education</button>
+      <button onclick="document.getElementById('filterCat').value='Feeding';applyFilters()">Feeding</button>
+      <button onclick="document.getElementById('filterCat').value='Mentorship';applyFilters()">Mentorship</button>
+    </div>
+
+    <div id="programList" class="grid" style="margin-top:20px"></div>
+    <p style="margin-top:20px">Want to join one? <a href="enquiry.html">Send an enquiry</a> and we will reply with cost and availability.</p>
+  </section>
+</main>
+
+<div class="modal" id="donateModal">
+  <div class="modal-box">
+    <h3 id="modalTitle">Donate Now</h3>
+    <p>Thank you for supporting Soweto children.</p>
+    <a class="btn" href="get-involved.html">Go to Donate Form</a>
+    <button class="btn btn-blue" id="closeModal">Close</button>
+  </div>
+</div>
+<div class="lightbox" id="lightbox"><img id="lightboxImg" src="" alt="Hope Haven photo"><button class="btn" id="closeLightbox">Close X</button></div>
+<footer class="site-footer container">
+  <div class="footer-brand">
+    <span class="brand-mark">❤</span>
+    <span>Hope Haven Foundation</span>
+  </div>
+  <div class="footer-links">
+    <a href="contact.html"><i>📍</i> Visit Us</a>
+    <a href="tel:+27825550199"><i>📞</i> Call</a>
+    <a href="mailto:info@hopehaven.org.za"><i>✉️</i> Email</a>
+    <a href="https://facebook.com/" target="_blank" rel="noopener"><i>f</i> Facebook</a>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

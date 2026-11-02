@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://storied-souffle-270564.netlify.app/sitemap.xml
